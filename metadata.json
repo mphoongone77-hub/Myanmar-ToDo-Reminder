@@ -1,0 +1,6 @@
+{
+  "name": "Myanmar Todo Reminder",
+  "description": "To-Do list with intelligent reminder alerts, Burmese voice input and speech synthesis, category filters, and task management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

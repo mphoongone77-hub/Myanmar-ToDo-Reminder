@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="12dp">
+
+    <!-- Widget Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_notification_bell"
+            android:contentDescription="App Icon" />
+
+        <TextView
+            android:id="@+id/widget_header_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="လုပ်ဆောင်ရန်များ"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FF1C1B1F"
+            android:singleLine="true" />
+
+        <!-- Refresh Button -->
+        <ImageButton
+            android:id="@+id/widget_refresh_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_widget_refresh"
+            android:contentDescription="Refresh Widget"
+            android:scaleType="centerInside" />
+
+        <!-- Quick Add Task Button -->
+        <ImageButton
+            android:id="@+id/widget_add_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/widget_add_btn_bg"
+            android:src="@drawable/ic_widget_add"
+            android:contentDescription="New Task"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFE0E2EC" />
+
+    <!-- Content Frame containing list and empty view -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp">
+
+        <!-- Task List -->
+        <ListView
+            android:id="@+id/widget_task_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="6dp" />
+
+        <!-- Empty State View -->
+        <LinearLayout
+            android:id="@+id/widget_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎉"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="လုပ်ဆောင်ရန် အားလုံး ပြီးစီးပါပြီ"
+                android:textSize="12sp"
+                android:textColor="#FF49454F"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ နှိပ်၍ အသစ်ထည့်နိုင်ပါသည်"
+                android:textSize="11sp"
+                android:textColor="#FF79747E" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

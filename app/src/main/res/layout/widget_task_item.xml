@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/widget_item_background"
+    android:gravity="center_vertical"
+    android:padding="8dp">
+
+    <!-- Priority Color Indicator Bar -->
+    <View
+        android:id="@+id/widget_item_priority_bar"
+        android:layout_width="4dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FF2E7D32" />
+
+    <!-- Mark Complete Check Button -->
+    <ImageButton
+        android:id="@+id/widget_item_complete_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/widget_complete_btn_bg"
+        android:src="@drawable/ic_widget_check"
+        android:contentDescription="Mark Completed"
+        android:scaleType="centerInside" />
+
+    <!-- Task Details -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/widget_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task Title"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#FF1C1B1F"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/widget_item_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏰ 10:00 AM | 🏷️ General"
+            android:textSize="11sp"
+            android:textColor="#FF49454F"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</LinearLayout>
